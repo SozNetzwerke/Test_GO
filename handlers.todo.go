@@ -9,7 +9,7 @@ import (
 )
 
 func showIndexPage(c *gin.Context) {
-	//todos := getAllTodos()
+	todos := getAllTodos()
 
 	// Call the HTML method of the Context to render a template
 	c.HTML(
@@ -21,7 +21,7 @@ func showIndexPage(c *gin.Context) {
 		gin.H{
 			"title":   "Home",
 			"navitem1":"active",
-			//"payload": todos,
+			"payload": todos,
 		},
 	)
 }
